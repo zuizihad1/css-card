@@ -1,0 +1,109 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card-container{
+    height:600px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: hsl(233, 47%, 7%);
+    color:white;
+    position: relative;
+}
+
+.card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:hsl(244, 38%, 16%);
+    height:400px;
+    width:1000px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+.colorText{
+    color: rgb(77, 64, 119);
+}
+.card-left{
+    width:500px;
+    padding: 0 50px;
+}
+.card-left h1{
+    font-size: 32px;
+    padding: 10px 0;
+}
+.card-left > p{
+    margin-top:20px;
+    margin-bottom: 40px;
+}
+.card-left .card-left-footer{
+    display:flex;
+    justify-content:flex-start;
+}
+.footer-item{
+    margin-right: 50px;
+}
+.footer-item p{
+    text-transform: uppercase;
+}
+
+.card-right{
+    background-image: url(./images/image-header-desktop.jpg);
+    height:400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:500px;
+    position: relative;
+}
+.overlay{
+    background-color: rgba(170, 92, 219, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* mobile responsive */
+@media only screen and (max-width: 375px){
+    .card-container{
+        height: 100vh;
+        width: 100vw;
+    }
+    .card{
+        flex-direction: column-reverse;
+        border-radius: 20px;
+        height: 100vh;
+        width: 90vw;
+        margin: auto auto;
+        position: unset;
+        text-align: center;
+    }
+    .card-left{
+        width: 100vw;
+    }
+    .card-left h1{
+        font-size:24px;
+    }
+    .card-right{
+        padding:0;
+        width:90vw;
+        border-radius:  20px 20px 0 0;
+    }
+    .overlay{
+        border-radius: 20px 20px 0 0;
+    }
+    .card-left .card-left-footer{
+       flex-direction: column;
+       text-align: center;
+    }
+    .footer-item{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
